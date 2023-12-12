@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #2E5090;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.algosproject.SignUpController">
+   <children>
+      <TextField editable="false" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="700.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 1;" text="      https://medicationreminder.com/sign-up/">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </TextField>
+      <ProgressBar fx:id="progressBar" layoutY="25.0" prefHeight="12.0" prefWidth="700.0" progress="0.0" style="-fx-border-color: black;" />
+      <ImageView fitHeight="19.0" fitWidth="25.0" layoutX="3.0" layoutY="4.0">
+         <image>
+            <Image url="@../../../lcok2.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="36.0" layoutY="166.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.5" text="Medication Reminder" textAlignment="CENTER" wrappingWidth="653.2093811035156">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <BoxBlur />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="60.0" />
+         </font>
+      </Text>
+      <Button fx:id="login" layoutX="613.0" layoutY="439.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="71.0" style="-fx-background-color: #4682B4; -fx-background-radius: 30;" text="Login" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="482.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?">
+         <effect>
+            <Lighting>
+               <light>
+                  <Light.Distant />
+               </light>
+               <bumpInput>
+                  <BoxBlur />
+               </bumpInput>
+            </Lighting>
+         </effect>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="username" layoutX="250.0" layoutY="200.0" prefHeight="30.0" prefWidth="225.0" promptText="Username">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="email" layoutX="250.0" layoutY="335.0" prefHeight="30.0" prefWidth="225.0" promptText="example@gmail.com">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="sign_up" layoutX="333.0" layoutY="390.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="71.0" style="-fx-background-color: #4682B4; -fx-background-radius: 30;" text="Sign Up" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="password" focusTraversable="false" layoutX="250.0" layoutY="250.0" prefHeight="30.0" prefWidth="225.0" promptText="Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </PasswordField>
+      <Text fx:id="empty_username" fill="WHITE" layoutX="250.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username is empty" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="empty_password" fill="WHITE" layoutX="251.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password is empty" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="empty_email" fill="WHITE" layoutX="250.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email is empty" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="limit_user" fill="WHITE" layoutX="482.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username should be in range of [5-8]" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="limit_password" fill="WHITE" layoutX="482.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password should be in range of [5-8]" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="limit_email" fill="WHITE" layoutX="482.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email should be in range of [5-8]" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

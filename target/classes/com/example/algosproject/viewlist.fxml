@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.algosproject.MedicationController">
+   <children>
+      <Pane layoutY="100.0" prefHeight="41.0" prefWidth="700.0" style="-fx-background-color: #2E5090; -fx-border-color: black;" />
+      <Text fill="#383232" layoutY="85.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.5" text="Medication Reminder" textAlignment="CENTER" wrappingWidth="699.9999999999999">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <BoxBlur />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <TextField editable="false" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="700.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 1;" text="      https://www.medicationreminder.com/user-page/viewlist/">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </TextField>
+      <ProgressBar fx:id="progressBar" layoutY="25.0" prefHeight="12.0" prefWidth="700.0" progress="0.0" style="-fx-border-color: black;" />
+      <ImageView fitHeight="19.0" fitWidth="25.0" layoutX="3.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../lcok2.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="confirm" layoutX="474.0" layoutY="424.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #4682B4; -fx-background-radius: 30;" text="Delete" textFill="WHITE">
+         <effect>
+            <Reflection />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView layoutX="5.0" layoutY="143.0" prefHeight="273.0" prefWidth="690.0">
+        <columns>
+          <TableColumn prefWidth="210.3999695777893" text="The name of medication" />
+          <TableColumn prefWidth="257.60003662109375" text="The dose of medication" />
+            <TableColumn prefWidth="221.60006713867188" text="The time you need to take it" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>
